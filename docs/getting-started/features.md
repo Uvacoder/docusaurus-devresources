@@ -1,22 +1,33 @@
 ---
-sidebar_position: 4
+sidebar_label: Features
 ---
 
 # Markdown Features
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
-
 ## Front Matter
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
+:::note
+**Front Matter :** Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/)
+. Front matter allows you to keep metadata attached to an instance of a content type—i.e., embedded inside a content file.
+:::
 
 ```text title="my-doc.md"
 // highlight-start
 ---
-id: my-doc-id
-title: My document title
-description: My document description
-slug: /my-custom-url
+id: doc-markdown
+title: Docs Markdown Features
+hide_title: false
+hide_table_of_contents: false
+sidebar_label: Markdown
+sidebar_position: 3
+pagination_label: Markdown features
+custom_edit_url: https://github.com/facebook/docusaurus/edit/main/docs/api-doc-markdown.md
+description: How do I find you when I cannot solve this problem
+keywords:
+  - docs
+  - docusaurus
+image: https://i.imgur.com/mErPwqL.png
+slug: /myDoc
 ---
 // highlight-end
 
@@ -25,19 +36,15 @@ slug: /my-custom-url
 Markdown text with [links](./hello.md)
 ```
 
+Read more: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter
+
 ## Links
 
 Regular Markdown links are supported, using url paths or relative file paths.
 
 ```md
-Let's see how to [Create a page](/create-a-page).
-```
-
-```md
 Let's see how to [Create a page](./create-a-page.md).
 ```
-
-**Result:** Let's see how to [Create a page](./create-a-page.md).
 
 ## Images
 
@@ -50,8 +57,6 @@ You can use absolute paths to reference images in the static directory (`static/
 ```
 
 ![Docusaurus logo](/img/docusaurus.png)
-
-You can reference images relative to the current file as well, as shown in [the extra guides](../tutorial-extras/manage-docs-versions.md).
 
 ## Code Blocks
 
@@ -99,6 +104,8 @@ This action is dangerous
 
 :::
 
+Read more: https://docusaurus.io/docs/markdown-features/admonitions
+
 ## MDX and React Components
 
 [MDX](https://mdxjs.com/) can make your documentation more **interactive** and allows using any **React components inside Markdown**:
@@ -126,19 +133,19 @@ This is <Highlight color="#1877F2">Facebook blue</Highlight> !
 ```
 
 export const Highlight = ({children, color}) => (
-  <span
-    style={{
+<span
+style={{
       backgroundColor: color,
       borderRadius: '20px',
       color: '#fff',
       padding: '10px',
       cursor: 'pointer',
     }}
-    onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`);
-    }}>
-    {children}
-  </span>
+onClick={() => {
+alert(`You clicked the color ${color} with label ${children}`);
+}}>
+{children}
+</span>
 );
 
 This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
