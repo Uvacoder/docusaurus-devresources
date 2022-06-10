@@ -12,7 +12,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo-new.svg",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -26,6 +26,25 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  plugins: [
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "whats-new",
+        routeBasePath: "whats-new",
+        path: "./whats-new",
+        blogTitle: "What's new",
+        blogDescription: "Monthly updates on what's new in development world",
+        blogSidebarTitle: "All posts",
+        blogSidebarCount: "ALL",
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
+        editUrl:
+          "https://github.com/anupam-crownstack/DevResource/tree/master/",
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -44,6 +63,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -59,15 +80,48 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: "placeholder",
+        apiKey: "placeholder",
+        indexName: "placeholder",
+      },
       navbar: {
         title: "DevResource",
         logo: {
-          alt: "DevResource Logo",
-          src: "img/logo.svg",
+          alt: "DevResource-Logo",
+          src: "img/logo-new.svg",
+          width: 32,
+          height: 32,
         },
         items: [
-          { to: "/blog", label: "Blog", position: "left" },
-          { to: "/contribute", label: "How to contribute", position: "right" },
+          { to: "/whats-new", label: "What's new" },
+          {
+            type: "dropdown",
+            label: "Community",
+            position: "left",
+            items: [
+              {
+                to: "/blog",
+                label: "Blog",
+              },
+              {
+                type: "html",
+                value: '<hr class="dropdown-separator">',
+              },
+              { to: "/blog/archive", label: "Archive" },
+              { to: "/blog/tags", label: "Tags" },
+              {
+                type: "html",
+                value: '<hr class="dropdown-separator">',
+              },
+              { href: "/contribute", label: "How to contribute" },
+            ],
+          },
+          {
+            type: "search",
+            position: "right",
+          },
+
           {
             href: "https://github.com/anupam-crownstack/DevResource",
             position: "right",
