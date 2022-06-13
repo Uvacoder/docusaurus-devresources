@@ -4,7 +4,7 @@ description: Free web tools to help you during web/software development
 ---
 
 ```mdx-code-block
-import Comment from "@site/src/components/Comment"
+import CommentBox from "@site/src/components/CommentBox"
 ```
 
 Free web tools to help you during web/software development
@@ -33,5 +33,7 @@ Free web tools to help you during web/software development
 | :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------: | :------------------------: | :----: | :----: |
 | PageSpeed Insights by Google | Reports on the performance of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved | https://pagespeed.web.dev/ |        |   ✅   |
 
+<hr />
+
 <!-- Comment for utterance -->
-<Comment />
+<CommentBox />

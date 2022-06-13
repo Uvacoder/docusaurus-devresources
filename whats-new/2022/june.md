@@ -4,6 +4,7 @@ title: What's new in June'22
 
 ```mdx-code-block
 import EmbedYT from "@site/src/components/EmbedYT"
+import CommentBox from "@site/src/components/CommentBox"
 
 ```
 
@@ -33,3 +34,6 @@ https://egghead.io/courses/up-and-running-with-remix-b82b6bb6
 <br/>
 
 **Read more:** https://developer.chrome.com/blog/new-in-chrome-102/
+
+<hr />
+<CommentBox />
