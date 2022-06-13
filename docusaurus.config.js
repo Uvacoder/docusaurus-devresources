@@ -31,6 +31,7 @@ const config = {
     [
       "@docusaurus/plugin-content-blog",
       {
+        showReadingTime: false,
         id: "whats-new",
         routeBasePath: "whats-new",
         path: "./whats-new",
@@ -70,6 +71,10 @@ const config = {
           editUrl:
             "https://github.com/anupam-crownstack/DevResource/tree/master/",
         },
+        googleAnalytics: {
+          trackingID: "G-RJ3FMGJ57Y",
+          anonymizeIP: true,
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -103,10 +108,6 @@ const config = {
               {
                 to: "/blog",
                 label: "Blog",
-              },
-              {
-                type: "html",
-                value: '<hr class="dropdown-separator">',
               },
               { to: "/blog/archive", label: "Archive" },
               { to: "/blog/tags", label: "Tags" },
