@@ -5,8 +5,11 @@ title: What's new in June'22
 ```mdx-code-block
 import EmbedYT from "@site/src/components/EmbedYT"
 import CommentBox from "@site/src/components/CommentBox"
-
 ```
+
+### Hashnode - Build with Linode Hackathon
+
+https://townhall.hashnode.com/build-with-linode-hackathon-june-2022
 
 ### Up and Running with Remix by Kent C. Dodds
 
