@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "DevResource",
   tagline: "All your dev guides in one place",
-  url: "http://www.devresource.cf/",
+  url: "http://docusaurus.devresources.vercel.app/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "anupam-crownstack", // Usually your GitHub org/user name.
-  projectName: "devresource", // Usually your repo name.
+  organizationName: "uvacoder", // Usually your GitHub org/user name.
+  projectName: "devresources", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -42,7 +42,7 @@ const config = {
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
         editUrl:
-          "https://github.com/anupam-crownstack/DevResource/tree/master/",
+          "https://github.com/uvacoder/docusaurus-devresources/tree/master/",
       },
     ],
   ],
@@ -60,7 +60,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/anupam-crownstack/DevResource/tree/master/",
+            "https://github.com/uvacoder/docusaurus-DevResources/tree/master/",
         },
         blog: {
           showReadingTime: true,
@@ -69,7 +69,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/anupam-crownstack/DevResource/tree/master/",
+            "https://github.com/uvacoder/docusaurus-DevResources/tree/master/",
         },
         googleAnalytics: {
           trackingID: "G-RJ3FMGJ57Y",
@@ -124,7 +124,7 @@ const config = {
           },
 
           {
-            href: "https://github.com/anupam-crownstack/DevResource",
+            href: "https://github.com/uvacoder/docusaurus-devresources",
             position: "right",
             className: "header-github-link",
             "aria-label": "GitHub repository",
