@@ -1,7 +1,6 @@
 ---
 sidebar_label: Create a document
 sidebar_position: 1
-slug: /
 ---
 
 # Create a document
